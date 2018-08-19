@@ -1,0 +1,30 @@
+﻿  PluginEditor.cpp
+  PluginProcessor.cpp
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(30): warning C4305: 'argument': truncation from 'double' to 'ValueType'
+          with
+          [
+              ValueType=float
+          ]
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(31): warning C4305: 'argument': truncation from 'double' to 'ValueType'
+          with
+          [
+              ValueType=float
+          ]
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(32): warning C4305: 'argument': truncation from 'double' to 'ValueType'
+          with
+          [
+              ValueType=float
+          ]
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(33): warning C4305: 'argument': truncation from 'double' to 'ValueType'
+          with
+          [
+              ValueType=float
+          ]
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(94): warning C4100: 'index': unreferenced formal parameter
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(98): warning C4100: 'index': unreferenced formal parameter
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(103): warning C4100: 'newName': unreferenced formal parameter
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(103): warning C4100: 'index': unreferenced formal parameter
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(108): warning C4100: 'samplesPerBlock': unreferenced formal parameter
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(108): warning C4100: 'sampleRate': unreferenced formal parameter
+c:\users\thomas\desktop\juce\distortionvst\source\pluginprocessor.cpp(144): warning C4100: 'midiMessages': unreferenced formal parameter
+  DistortionVST_SharedCode.vcxproj -> C:\Users\Thomas\Desktop\JUCE\DistortionVST\Builds\VisualStudio2017\x64\Debug\Shared Code\DistortionVST.lib
