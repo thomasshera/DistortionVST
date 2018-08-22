@@ -17,20 +17,24 @@ DistortionVstAudioProcessorEditor::DistortionVstAudioProcessorEditor (Distortion
     : AudioProcessorEditor (&p), processor (p)
 {
 	addAndMakeVisible(driveKnob = new Slider("Drive"));
-	driveKnob->setSliderStyle(Slider::Rotary);
-	driveKnob->setTextBoxStyle(Slider::NoTextBox, false, 100, 100);
+	driveKnob->setSliderStyle(Slider::LinearVertical);
+	driveKnob->setTextBoxStyle(Slider::TextBoxBelow, false, 100, 50);
+	driveKnob->setTextValueSuffix("\nDrive");
 
 	addAndMakeVisible(rangeKnob = new Slider("Range"));
-	rangeKnob->setSliderStyle(Slider::Rotary);
-	rangeKnob->setTextBoxStyle(Slider::NoTextBox, false, 100, 100);
+	rangeKnob->setSliderStyle(Slider::LinearVertical);
+	rangeKnob->setTextBoxStyle(Slider::TextBoxBelow, false, 100, 50);
+	rangeKnob->setTextValueSuffix("\nRange");
 
 	addAndMakeVisible(blendKnob = new Slider("Blend"));
-	blendKnob->setSliderStyle(Slider::Rotary);
-	blendKnob->setTextBoxStyle(Slider::NoTextBox, false, 100, 100);
+	blendKnob->setSliderStyle(Slider::LinearVertical);
+	blendKnob->setTextBoxStyle(Slider::TextBoxBelow, false, 100, 50);
+	blendKnob->setTextValueSuffix("\nBlend");
 
 	addAndMakeVisible(volumeKnob = new Slider("Volume"));
-	volumeKnob->setSliderStyle(Slider::Rotary);
-	volumeKnob->setTextBoxStyle(Slider::NoTextBox, false, 100, 100);
+	volumeKnob->setSliderStyle(Slider::LinearVertical);
+	volumeKnob->setTextBoxStyle(Slider::TextBoxBelow, false, 100, 50);
+	volumeKnob->setTextValueSuffix("\nVolume");
 
 	driveAttachment = new AudioProcessorValueTreeState::SliderAttachment(p.getState(), "drive", *driveKnob);
 	rangeAttachment = new AudioProcessorValueTreeState::SliderAttachment(p.getState(), "range", *rangeKnob);
@@ -39,7 +43,7 @@ DistortionVstAudioProcessorEditor::DistortionVstAudioProcessorEditor (Distortion
 
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-	localWidth = 500;
+	localWidth = 400;
 	localHeight = 200;
 
 	setSize(localWidth, localHeight);
@@ -57,7 +61,6 @@ void DistortionVstAudioProcessorEditor::paint (Graphics& g)
 
     g.setColour (Colours::white);
     g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), Justification::centred, 1);
 }
 
 void DistortionVstAudioProcessorEditor::resized()
@@ -67,8 +70,8 @@ void DistortionVstAudioProcessorEditor::resized()
 
 	auto area = getLocalBounds();
 
-	buttonWidth = localWidth / 4;
-	buttonHeight = localHeight / 2;
+	buttonWidth = getWidth() / 4;
+	//buttonHeight = getHeight() / 2;
 	
 	driveKnob->setBounds(area.removeFromLeft(buttonWidth));
 	rangeKnob->setBounds(area.removeFromLeft(buttonWidth));
