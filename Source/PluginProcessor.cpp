@@ -177,7 +177,7 @@ void DistortionVstAudioProcessor::processBlock (AudioSampleBuffer& buffer, MidiB
 			dirtySig = (2.0f / float_Pi) * atan(*channelData);
 
 			//blend
-			*channelData = (((dirtySig * blend) + (cleanSig * (1.0f / blend)) / 2)) * volume;
+			*channelData = (((dirtySig * blend) + (cleanSig * (1.0f - blend)) / 2) * volume);
 
 			channelData++;
 		}
